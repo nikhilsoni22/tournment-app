@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:game_tourney/Customs/custom_app_bar.dart';
+import 'package:game_tourney/Screens/BottomScreens/Profile/Settings/settings.dart';
 import 'package:game_tourney/UiHelper/app_color.dart';
 import 'package:game_tourney/UiHelper/app_fonts.dart';
 import 'package:game_tourney/UiHelper/app_icons.dart';
@@ -25,6 +26,10 @@ class _BottomBarState extends State<BottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
+        onSettingTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
+        },
+        isSettings: tab == 3 ? true : false,
         image: tab == 0 ? AppIcons.gamingRemote : null,
         title: tab == 0 ? "home" : tab == 1 ? "Ranking" : tab == 2 ? "Tournaments Chats" : "Profile",
       ),

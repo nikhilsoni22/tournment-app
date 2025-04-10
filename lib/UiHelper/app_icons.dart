@@ -14,4 +14,17 @@ class AppIcons {
   static const String silverMedals = "assets/icons/silverMedals.png";
   static const String bronzeMedals = "assets/icons/bronze.png";
   static const String taj = 'assets/icons/taj.png';
+  static const String goldTrophy = 'assets/icons/gold_trophy.png';
+  static const String goldBatch = "assets/icons/gold_batch.png";
+  static const String starBatch = "assets/icons/star_batch.png";
+  static const String camera = "assets/icons/camera.png";
+  static const String key = "assets/icons/key.png";
+  static const String languageIcon = "assets/icons/language_icon.png";
+  static const String halfMoon = "assets/icons/half_moon.png";
+  static const String lock = "assets/icons/lock.png";
+  static const String grayGamingRemote = "assets/icons/gray_remote.png";
+  static const String region = "assets/icons/region.png";
+  static const String questionMark = "assets/icons/question_mark.png";
+  static const String shield = "assets/icons/shield.png";
+  static const String paper = "assets/icons/paper.png";
 }

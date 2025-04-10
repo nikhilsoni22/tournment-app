@@ -79,14 +79,17 @@ class _RankingScreenState extends State<RankingScreen> {
             ],
           ),
 
-          if(isMonth == true)...[
+          if (isMonth == true) ...[
             Expanded(
               child: ListView.builder(
                 itemCount: itemMonthList.length,
                 itemBuilder: (context, index) {
                   final items = itemMonthList[index];
                   return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 15.0,
+                      vertical: 10,
+                    ),
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -99,7 +102,7 @@ class _RankingScreenState extends State<RankingScreen> {
                                 : index == 2
                                 ? AppColor.bronzeColor
                                 : AppColor.lightGrey,
-                           index > 2 ? AppColor.lightGrey : AppColor.darkgrey,
+                            index > 2 ? AppColor.lightGrey : AppColor.darkgrey,
                           ],
                         ),
                       ),
@@ -107,24 +110,47 @@ class _RankingScreenState extends State<RankingScreen> {
                       width: double.infinity,
                       child: ListTile(
                         leading: items.image,
-                        title: Text(items.name.toString(), style: textStyle(color: Colors.black, fontFamily: AppFonts.mplusBold, size: 16)),
-                        subtitle: Text(items.score.toString(),style: textStyle(size: 14, color: Colors.black, fontWeight: FontWeight.w400)),
-                        trailing: index == 0 ? Image.asset(AppIcons.goldMedals, scale: 1.4) : index == 1 ? Image.asset(AppIcons.silverMedals, scale: 1.4) : index == 2 ? Image.asset(AppIcons.bronzeMedals, scale: 1.4) : Text("#${index + 1}",style: textStyle(color: Colors.black)),
+                        title: Text(
+                          items.name.toString(),
+                          style: textStyle(
+                            color: Colors.black,
+                            fontFamily: AppFonts.mplusBold,
+                            size: 16,
+                          ),
+                        ),
+                        subtitle: Text(
+                          items.score.toString(),
+                          style: textStyle(
+                            size: 14,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        trailing:
+                            index == 0
+                                ? Image.asset(AppIcons.goldMedals, scale: 1.4)
+                                : index == 1
+                                ? Image.asset(AppIcons.silverMedals, scale: 1.4)
+                                : index == 2
+                                ? Image.asset(AppIcons.bronzeMedals, scale: 1.4)
+                                : Text("#${index + 1}", style: textStyle(color: Colors.black)),
                       ),
                     ),
                   );
                 },
               ),
             ),
-          ] else...[
-
+          ] else ...[
             Expanded(
               child: ListView.builder(
                 itemCount: itemList.length,
                 itemBuilder: (context, index) {
                   final items = itemList[index];
                   return Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 15.0,
+                      vertical: 10,
+                    ),
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
@@ -137,7 +163,7 @@ class _RankingScreenState extends State<RankingScreen> {
                                 : index == 2
                                 ? AppColor.bronzeColor
                                 : AppColor.lightGrey,
-                          index > 2 ? AppColor.lightGrey : AppColor.darkgrey,
+                            index > 2 ? AppColor.lightGrey : AppColor.darkgrey,
                           ],
                         ),
                       ),
@@ -145,9 +171,33 @@ class _RankingScreenState extends State<RankingScreen> {
                       width: double.infinity,
                       child: ListTile(
                         leading: items.image,
-                        title: Text(items.name.toString(), style: textStyle(color: Colors.black, fontFamily: AppFonts.mplusBold, size: 16)),
-                        subtitle: Text(items.score.toString(),style: textStyle(size: 14, color: Colors.black, fontWeight: FontWeight.w400)),
-                        trailing: index == 0 ? Image.asset(AppIcons.goldMedals, scale: 1.4) : index == 1 ? Image.asset(AppIcons.silverMedals, scale: 1.4) : index == 2 ? Image.asset(AppIcons.bronzeMedals, scale: 1.4) : Text("#${index + 1}",style: textStyle(color: Colors.black)),
+                        title: Text(
+                          items.name.toString(),
+                          style: textStyle(
+                            color: Colors.black,
+                            fontFamily: AppFonts.mplusBold,
+                            size: 16,
+                          ),
+                        ),
+                        subtitle: Text(
+                          items.score.toString(),
+                          style: textStyle(
+                            size: 14,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        trailing:
+                            index == 0
+                                ? Image.asset(AppIcons.goldMedals, scale: 1.4)
+                                : index == 1
+                                ? Image.asset(AppIcons.silverMedals, scale: 1.4)
+                                : index == 2
+                                ? Image.asset(AppIcons.bronzeMedals, scale: 1.4)
+                                : Text(
+                                  "#${index + 1}",
+                                  style: textStyle(color: Colors.black),
+                                ),
                       ),
                     ),
                   );
@@ -163,94 +213,89 @@ class _RankingScreenState extends State<RankingScreen> {
   List<TempDataModel> itemList = [
     TempDataModel(
       name: "nikhil",
-       image: Image.asset(AppImages.profileImg),
+      image: Image.asset(AppImages.profileImg),
       score: "score 2150pts",
     ),
     TempDataModel(
       name: "rakesh",
-       image: Image.asset(AppImages.profileImg),
+      image: Image.asset(AppImages.profileImg),
       score: "score 1950pts",
     ),
     TempDataModel(
-      name: "dhruv",
-       image: Image.asset(AppImages.profileImg),
+      name: "pino",
+      image: Image.asset(AppImages.profileImg),
       score: "score 1850pts",
     ),
     TempDataModel(
       name: "monu",
-       image: Image.asset(AppImages.profileImg),
+      image: Image.asset(AppImages.profileImg),
       score: "score 1550pts",
     ),
     TempDataModel(
       name: "sonu",
-       image: Image.asset(AppImages.profileImg),
+      image: Image.asset(AppImages.profileImg),
       score: "score 1050pts",
     ),
     TempDataModel(
       name: "sonu",
-       image: Image.asset(AppImages.profileImg),
-      score: "score 1050pts",
-    ),
-
-    TempDataModel(
-      name: "sonu",
-       image: Image.asset(AppImages.profileImg),
+      image: Image.asset(AppImages.profileImg),
       score: "score 1050pts",
     ),
 
     TempDataModel(
       name: "sonu",
-       image: Image.asset(AppImages.profileImg),
+      image: Image.asset(AppImages.profileImg),
+      score: "score 1050pts",
+    ),
+
+    TempDataModel(
+      name: "sonu",
+      image: Image.asset(AppImages.profileImg),
       score: "score 1050pts",
     ),
   ];
-
 
   List<TempMonthDataModel> itemMonthList = [
     TempMonthDataModel(
-      name: "jayansh",
-       image: Image.asset(AppImages.profileImg),
+      name: "monu",
+      image: Image.asset(AppImages.profileImg),
       score: "score 2150pts",
-    ),  TempMonthDataModel(
+    ),
+    TempMonthDataModel(
       name: "nikhil",
-       image: Image.asset(AppImages.profileImg),
+      image: Image.asset(AppImages.profileImg),
       score: "score 2150pts",
-    ),  TempMonthDataModel(
-      name: "dhruv",
-       image: Image.asset(AppImages.profileImg),
+    ),
+    TempMonthDataModel(
+      name: "tonu",
+      image: Image.asset(AppImages.profileImg),
       score: "score 1440pts",
-    ),  TempMonthDataModel(
-      name: "rakshit",
-       image: Image.asset(AppImages.profileImg),
+    ),
+    TempMonthDataModel(
+      name: "tino",
+      image: Image.asset(AppImages.profileImg),
       score: "score 1200pts",
-    ),  TempMonthDataModel(
-      name: "umesh",
-       image: Image.asset(AppImages.profileImg),
+    ),
+    TempMonthDataModel(
+      name: "konu",
+      image: Image.asset(AppImages.profileImg),
       score: "score 120pts",
     ),
   ];
-
 }
-
 
 class TempDataModel {
   String? name;
   String? score;
   Image? image;
-  TempDataModel({
-    this.name,
-    this.score,
-    this.image
-});
+
+  TempDataModel({this.name, this.score, this.image});
 }
 
 class TempMonthDataModel {
   String? name;
   String? score;
   Image? image;
-  TempMonthDataModel({
-    this.name,
-    this.score,
-    this.image
-});
+
+  TempMonthDataModel({this.name, this.score, this.image});
 }
